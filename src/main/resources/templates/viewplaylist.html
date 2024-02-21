@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>View Playlist</title>
+<style type="text/css">
+iframe{
+height:200px;
+width:700px;
+}
+
+</style>
+</head>
+<body>
+<table border>
+<thead>
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Songs</th>
+
+</tr>
+</thead>
+<tbody>
+<tr th:each="playList:${playlists}">
+<td th:text="${playList.id}" >  </td>
+<td th:text="${playList.name}">  </td>
+<td th:text="${playList.songs}">  </td>
+<td>
+<ul>
+<li th:each="song : ${playList.songs}">
+<span th:text="${song.name}"></span>
+<audio controls loop muted autoplay>
+<source th:src="${song.link}" type="audio/mpeg">
+
+</audio>
+
+</li>
+
+</ul>
+</td>
+
+
+</tr>
+</tbody>
+
+</table>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+<style>
+  body {
+ background-image: url("https://t4.ftcdn.net/jpg/01/90/86/33/360_F_190863347_AYqLyAe1M056aNrDkrNmexXvcCLjvwqw.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  height: 100vh;
+  }
+</style>
+</head>
+<body>
+<h1>User Registration</h1>
+<form action="register" method="post">
+<label>User Name</label>
+<input type="text" name="username"/><br><br>
+<label>email</label>
+<input type="text" name="email"/><br><br>
+<label>Password</label>
+<input type="text" name="password"/><br><br>
+<label>gender</label>
+M<input type="radio" name="gender" value="Male"/>
+F<input type="radio" name="gender" value="Female"/>
+O<input type="radio" name="gender" value="Others"/>
+<br><br>
+<label>role</label>
+Admin<input type="radio" name="role" value="admin"/>
+Customer<input type="radio" name="role" value="customer"/>
+<br><br>
+<label>Address</label>
+<textarea name="address"></textarea>
+<br><br>
+<input type="submit" value="Register"/>
+
+</form>
+
+</body>
+</html>
